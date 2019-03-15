@@ -45,23 +45,17 @@ public class List_inArraySlots {
 
       @return true, in keeping with conventions yet to be discussed
      */
-     public boolean add( int type   // same meaning as in typeOfElements
-                       , Integer    intValue
-                       , Double doubleValue
-                       , String stringValue
-                       , Boolean booleanValue
-                       ) {
-       if (filledElements == list.length)
-           expand();
-       if (type == 0)
-          list[filledElements++] = intValue;
-       else if (type == 1)
-          list[filledElements++] = doubleValue;
-       else if (type == 2)
-          list[filledElements++] = stringValue;
-       else
-          list[filledElements++] = booleanValue;
-       return true;
+    public boolean add( Object input){
+        // expand when at max
+        if (filledElements == list.length) expand();
+        
+        // create new instance using param and add 
+        list[filledElements] = input;
+
+        // update size
+        filledElements++;
+
+        return true;
      }
 
 
@@ -77,6 +71,7 @@ public class List_inArraySlots {
             list[i] = storage[i];
           }
       }
+	  
       public Object get(int index){
           return list[index];
       }

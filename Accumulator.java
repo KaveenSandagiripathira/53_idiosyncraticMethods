@@ -10,14 +10,18 @@ public class Accumulator {
       in the \list that begin with \prefix,
       each followed by a space.
      */
-    String catElementsStartingWith(
+    public static String catElementsStartingWith(
         List_inArraySlots list
       , String prefix
       ) {
-        String result;
-        result = "change me";
+        String result = "";
+        for (Object element: List_inArraySlots){
+			if (element.startsWith(prefix))
+				result += element + " ";
+		}			
         return result; 
     }
+	
 
 
     // /**
