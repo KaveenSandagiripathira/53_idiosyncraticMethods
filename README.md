@@ -1,1 +1,7 @@
-# 53_idiosyncraticMethods
+# solution
+
+initial version by Kyra Gunluck
+
+## comments and questions
+
+## further improvements
