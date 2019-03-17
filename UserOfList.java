@@ -27,6 +27,7 @@ public class UserOfList {
 		System.out.println(list);
 		
 		System.out.println(Accumulator.catElementsStartingWith(list, "pi"));
+		System.out.println(Accumulator.finites(list));
 		
     }
 }

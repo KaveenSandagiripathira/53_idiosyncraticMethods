@@ -19,6 +19,8 @@ public class Accumulator {
         for (int pos = 0; pos < list.size(); pos ++){
 			element = list.get(pos);
 			if (element instanceof String && (String.valueOf(element)).startsWith(prefix))
+				//Bit weird using String.valueOf(element) which only works because valueOf by default
+				//is defined by the Object parameter)
 				result += element + " ";
 		}			
         return result; 
@@ -26,12 +28,22 @@ public class Accumulator {
 	
 
 
-    // /**
-      // @return a list of each of the Double elements
-      // from the \list whose value is "finite".
-     // */
-    // public List_inArraySlots finites(
-        // List_inArraySlots list
-      // ) {
-    // }
+    /**
+      @return a list of each of the Double elements
+      from the \list whose value is "finite".
+     */
+    public static List_inArraySlots finites(List_inArraySlots list) {
+		List_inArraySlots result = new List_inArraySlots();
+		Object element;
+		Double temp;
+        for (int pos = 0; pos < list.size(); pos ++){
+			element = list.get(pos);
+			if (element instanceof Double){
+				temp = (Double)element;
+				if (!temp.isInfinite())
+					result.add(temp);
+			}
+		}
+		return result;		
+    }
 }
