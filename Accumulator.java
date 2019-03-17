@@ -15,8 +15,10 @@ public class Accumulator {
       , String prefix
       ) {
         String result = "";
-        for (Object element: List_inArraySlots){
-			if (element.startsWith(prefix))
+		Object element;
+        for (int pos = 0; pos < list.size(); pos ++){
+			element = list.get(pos);
+			if (element instanceof String && (String.valueOf(element)).startsWith(prefix))
 				result += element + " ";
 		}			
         return result; 
