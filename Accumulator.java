@@ -27,6 +27,7 @@ public class Accumulator {
                This protection is implemented by the compiler (compiler? JVM?)
                The following code violates the restriction:
               */
+		
             // element.startsWith(prefix);
 
             /*
@@ -102,9 +103,9 @@ public class Accumulator {
              */
 
             // [working code here, finally]
-			if (element instanceof String){
-				temp = (String)element;
-				if(temp.startsWith(prefix))
+			if (element instanceof String){  //if the element is of string type
+				temp = (String)element;      //element that is an object type is casted to string type
+				if(temp.startsWith(prefix))  //startsWith() method is unique to String class
 					result += temp + " ";
 			}	
 		}			

@@ -5,8 +5,7 @@
  */
 
 public class List_inArraySlots {
-    private Object[] list = new Object[5];
-    private static final int INITIAL_CAPACITY = 10;
+    private Object[] list;
     private int filledElements;
     /**
       Construct an empty list with a small initial capacity.
