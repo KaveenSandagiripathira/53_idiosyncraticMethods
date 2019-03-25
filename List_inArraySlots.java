@@ -74,4 +74,28 @@ public class List_inArraySlots {
       public Object get(int index){
           return list[index];
       }
+	  
+	  
+	  /**
+      Appends @value to the head of this list.
+
+      @return true, in keeping with conventions yet to be discussed
+     */
+    public boolean addAsHead( Object input){
+        // expand when at max
+        if (filledElements == list.length) expand();
+        
+		//set the values after the head to previous values
+		for(int index = list.length - 1; index < filledElements; index--){ //repopulate with old values
+            list[index + 1] = list[index];
+          } 
+		
+		//set new value as head
+       list[0] = input;
+
+        // update size
+        filledElements++;
+
+        return true;
+     }
 }

@@ -29,5 +29,9 @@ public class UserOfList {
 		System.out.println(Accumulator.catElementsStartingWith(list, "pi"));
 		System.out.println(Accumulator.finites(list));
 		
+		//test for addAsHead()
+		list.addAsHead("new head");
+		System.out.println(list);
+		
     }
 }
